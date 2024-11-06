@@ -1,0 +1,17 @@
+[package]
+name = "remote-send"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rust-s3 = "0.36.0-beta.2"
+futures = "0.3.31"
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+clap = { version = "4.5.20", features = ["derive"] }
+toml = "0.8.19"
+serde = { version = "1.0.214", features = ["derive"] }
+anyhow = "1.0.92" # for bin
+thiserror = "1.0.66"  # for lib
+
+[features]
+default = ["rust-s3/with-tokio"]
