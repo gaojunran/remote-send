@@ -1,0 +1,13 @@
+[s3] # below is a sample configuration for S3 storage, recommend to use https://www.bitiful.com/.
+region = "cn-east-1"
+endpoint = "s3.bitiful.net"
+access_key = "YPKSJYXboN1iDCJdhijg5kxw"
+secret_key = "EKFrR95qw3kbxsztaVDoAkuvl1akVO2"
+bucket_name = "nebula2021-01"
+
+[rule]
+prefix = "rs/"  # prefix of all the stored objects, should end with a delimiter.
+delimiter = "/"  # Don't change it unless you are quite sure what it exactly should be.
+# see more about prefix & delimiter in https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html
+name_conflict_mode = "rename"  # rename, overwrite, error
+file_location = "cwd"  # cwd(current working directory), or a specific directory path
